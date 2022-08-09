@@ -1,16 +1,13 @@
-# [package]
-# name = "rust_appolo_server"
-# version = "0.1.0"
-# edition = "2021"
+[package]
+name = "rust_appolo_server"
+version = "0.1.0"
+edition = "2021"
 
 # # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-# [dependencies]
-
-[workspace]
-members = [
-    "auth-service",
-    "planets-service",
-    "satellites-service",
-    "common-utils",
-]
+[dependencies]
+warp = "0.3.2"
+log = "0.4.17"
+pretty_env_logger = "0.4.0"
+tokio = { version = "1.20.1", features = ["full"] }
+serde_json = "1.0.83"
